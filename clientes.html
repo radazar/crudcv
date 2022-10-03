@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="img/icomoto.png">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8a477f8506.js" crossorigin="anonymous"></script>
+</head>
+<body onload="verDatos();">
+   <header id="menu">
+    <nav class="navbar1">
+      <div class="navbar2">
+        <a class="navbar4" href="index.html"> <img src="img/mot11.png" width="112" height="28"></a>
+        <a class="navbar3" href="index.html">Inicio</a>
+        <a class="navbar3" href="clientes.html">Clientes</a>
+        <a class="navbar3" href="ventas.html">Ventas</a>
+      </div>
+    </nav>
+   </header>
+   <br>
+   <main class="contenido">
+       <div id="tclient" class="crud">
+           <div class="titulo2">
+               <h1>Tabla Clientes</h1>
+               <button onclick="abrirmodalCrear()" class="button is-success" id="nuevocliente">
+               <i class="fa-sharp fa-solid fa-plus"></i><span>Nuevo cliente</span></button>
+           </div>
+        <table id="tclientes" class="table">
+              <thead>
+                <tr>
+                 <th>ID</th>
+                 <th>Nombre</th>
+                 <th>Apellido</th>
+                 <th>Ciudad</th>
+                 <th>Email</th>
+                 <th>Telefono</th>
+                 <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody id="listac">
+                  
+              </tbody>
+           </table>
+       </div>
+   </main>
+   
+   <div class="modal" id="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Crear nuevo cliente</p>
+          <button onclick="abrirmodalCrear()" class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="crearcliente">
+               <div class="field">
+                  <label class="label">Nombre</label>
+                  <div class="control">
+                    <input id="nombre"  class="input" type="text" placeholder="Juan">
+                  </div>
+               </div>
+               <div class="field">
+                  <label class="label">Apellido</label>
+                  <div class="control">
+                    <input id="apellido" class="input" type="text" placeholder="Perez">
+                  </div>
+               </div>
+               <div class="field">
+                  <label class="label">Ciudad</label>
+                  <div class="control">
+                    <input id="ciudad" class="input" type="text" placeholder="Bogota">
+                  </div>
+               </div>
+               <div class="field">
+                  <label class="label">Correo</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input id="correo" class="input" type="email" placeholder="email@email.com">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Telefono</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input id="telefono" class="input" type="cel" placeholder="3012856987">
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                </div>
+          </form>
+        </section>
+        <footer class="modal-card-foot">
+          <button onclick="tomarDatos()" class="button is-success">Crear</button>
+        </footer>
+      </div>
+   </div>
+   
+   <div class="modal" id="modaledit">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Editar cliente</p>
+          <button onclick="abrirmodaleditar()" class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="editarclientes">
+               
+          </form>
+        </section>
+        <footer class="modal-card-foot">
+          <button onclick="actualizar()" class="button is-success">Actualizar</button>
+        </footer>
+      </div>
+   </div>
+       <footer>
+       <br>
+        <ul>
+           <li> <span>Robert Andrei Daza</span> </li>
+           <li> <span>Luis Escorcia</span> </li>
+           <li> <span>Semillero</span> </li>
+           <li> <span>Fuente: motofichas.com</span> </li>
+        </ul>       
+    </footer>
+
+</body>
+</html>
